@@ -55,7 +55,7 @@ def bulk_playlist_download():
     for line in file:
         playlist_url = Playlist(str(line))
         print("Enter Destination path (leave blank for current directory)")
-        destination = input('>> ') or f'{playlist_url.title}'
+        destination = f'{playlist_url.title}'
         print(f'Now downloading playlist: {playlist_url.title}')
         for video in playlist_url.videos:
             mp3_download(video, destination)
